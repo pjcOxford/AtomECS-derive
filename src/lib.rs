@@ -9,7 +9,7 @@ use quote::quote;
 ///
 /// Note that this macro assumes:
 ///  * The struct implements Clone.
-///  * The struct only contains fields implementing Multiple and Add.
+///  * The struct only contains fields implementing Multiply and Add.
 #[proc_macro_derive(Lerp)]
 pub fn lerp_macro_derive(input: TokenStream) -> TokenStream {
     let ast = syn::parse(input).unwrap();
