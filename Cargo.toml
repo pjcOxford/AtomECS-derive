@@ -2,6 +2,12 @@
 name = "atomecs-derive"
 version = "0.1.0"
 authors = ["Elliot Bentine <7041164+ElliotB256@users.noreply.github.com>"]
+description = "Derive macros for atomecs."
+homepage = "https://github.com/TeamAtomECS/AtomECS-derive"
+repository = "https://github.com/TeamAtomECS/AtomECS-derive"
+edition = "2018"
+license = "GPL-3.0-or-later"
+readme = "README.md"
 
 [lib]
 proc-macro = true
