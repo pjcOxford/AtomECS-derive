@@ -29,7 +29,7 @@ fn impl_lerp_macro(ast: &syn::DeriveInput) -> TokenStream {
                     for field in named.named.iter() {
                         let field_name = field.ident.as_ref();
                         field_assignment_tokens.extend(
-                            quote!(output.#field_name = self.#field_name * (1.0 - amount) + amount * other.#field_name;)
+                            quote!(output.#field_name = self.#field_name * (1.0_f32 - amount) + amount * other.#field_name;)
                             );
                     }
                 }
@@ -38,7 +38,7 @@ fn impl_lerp_macro(ast: &syn::DeriveInput) -> TokenStream {
 
             let tokens = quote! {
                 impl Lerp<#name> for #name {
-                fn lerp(&self, other: &Self, amount: f64) -> Self {
+                fn lerp(&self, other: &Self, amount: f32) -> Self {
                     let mut output = self.clone();
                     // assign field values for lerpable fields.
                     #field_assignment_tokens
