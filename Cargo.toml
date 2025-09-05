@@ -1,5 +1,5 @@
 [package]
-name = "atomecs-derive"
+name = "f32_atomecs-derive"
 version = "0.1.0"
 authors = ["Elliot Bentine <7041164+ElliotB256@users.noreply.github.com>"]
 description = "Derive macros for atomecs."
